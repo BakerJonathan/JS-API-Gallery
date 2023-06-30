@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="main.js"></script>
+
+<title>Gallery API</title>
+</head>
+<body>
+    <div id="overlay" onclick="removeOverlay()">
+      <h1 class="overlayTxt"></h1>
+    </div>
+
+    <h1 class="text-center">I figured I'd keep the html fairly simple since we're here to practice api. Just gonna be commentary on why I chose the art.
+        <br>Click art for more details, and click the informative overlay to exit.
+    </h1>
+
+    <div class="container ">
+        <div class="d-md-flex align-items-center justify-content-between py-2">
+            <h1 class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">This one reminds of of a Where's Waldo book, but the contents are of an arrest, which cracks me up a bit, as the artstyle is almost jovial.</h1>
+            <!-- https://www.artic.edu/artworks/76816/the-young-emperor-akbar-arrests-the-insolent-shah-abu-l-maali-page-from-a-manuscript-of-the-akbarnama -->
+           <img src="static/1919.898 - The Young Emperor Akbar Arrests the Insolent Shah....jpg" alt="Emperor arrests dude" class="col-lg-4 col-md-6 col-sm-12 col-12" onclick="getJSON(0)">
+        </div>
+
+        <div class="d-md-flex align-items-center justify-content-between py-2">
+            <img src="static/1993.349 - Gaming Set.jpg" alt="1700 gaming set" class="col-lg-6 col-md-6 col-sm-12 col-12" onclick="getJSON(1)">
+            <h1 class="col-lg-5 col-md-6 col-sm-12 col-12 text-center">I think sometimes we view historic people with a hint of mysticism or barbarism. These sorts of 'artifacts' are nice reminders that they probably weren't as different from us as we might think.</h1>
+            <!-- https://www.artic.edu/artworks/126981/gaming-set -->
+            
+        </div>
+
+        <div class="d-md-flex align-items-center justify-content-between py-2">
+            <h1 class="col-lg-5 col-md-6 col-sm-12 col-12 text-center">When reading through the bible there's sometimes reference to denarius(and other ancient currencies), and it's neat to see them.</h1>
+            <!-- https://www.artic.edu/artworks/9978/denarius-coin-depicting-the-god-apollo -->
+            <img src="static/1923.1261 - Denarius (Coin) Depicting the God Apollo.jpg" alt="Denarius" class="col-lg-7 col-md-6 col-sm-12 col-12" onclick="getJSON(2)">
+        </div>
+
+        <div class="d-md-flex align-items-center justify-content-between py-2">
+            <img src="static/1889.118 - Stemless Kylix (Drinking Cup).jpg" alt="Ancient Drinking Cup" class="col-lg-5 col-md-6 col-sm-12 col-12" onclick="getJSON(3)">
+            <h1 class="col-lg-6 col-md-6 col-sm-12 col-12 text-center">This is a drinking cup. It's a bit different from what I'm used to. Though there's a wide array of shapes that can be functional for one purpose.</h1>
+            <!-- https://www.artic.edu/artworks/281/stemless-kylix-drinking-cup -->
+            
+        </div>
+
+        <div class="d-md-flex align-items-center justify-content-between py-2">
+            <h1 class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">Again on the fact that our ancestors were similar to us, we'll collect many silly objects like this now too. A bird pitcher.</h1>
+            <!-- https://www.artic.edu/artworks/22525/bird-shaped-ewer-with-crowned-rider-holding-a-bowl -->
+            <img src="static/1964.1213 - Bird Shaped Ewer with Crowned Rider Holding a Bowl....jpg" alt="Bird pitcher" class="col-lg-4 col-md-6 col-sm-12 col-12" onclick="getJSON(4)">
+        </div>
+
+        <div class="d-md-flex align-items-center justify-content-between py-2">
+            
+            <!-- https://www.artic.edu/artworks/13617/nadar-elevating-photography-to-the-heights-of-art-plate-367-from-souvenirs-d-artistes -->
+            <img src="static/1961.373 - Nadar Elevating Photography to the Heights of Art,....jpg" alt="Nadar takes ariel photos" class="col-lg-4 col-md-6 col-sm-12 col-12" onclick="getJSON(5)">
+            <h1 class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">This was a depiction of Nadar, who was the first to do arial photography. This depicts Nadar as a bit wild, and I think we view most 'pioneering eccentrics' that way.</h1>
+        </div>
+        
+    </div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

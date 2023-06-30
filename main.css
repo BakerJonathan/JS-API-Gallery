@@ -1,0 +1,28 @@
+*{
+    background:  azure;
+    /* border: 1px solid red; */
+}
+
+
+body{
+    background-color: skyblue;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 90%; 
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    background-color: rgba(0,0,0,0.8); 
+    padding: 2%;
+    font-size: xx-large;
+    color: white;
+    white-space: pre-line;
+    border-radius: 7px;
+    overflow: overlay;
+    /* Note this method apparently doesn't work with mozilla */
+}
